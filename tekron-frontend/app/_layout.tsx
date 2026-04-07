@@ -12,6 +12,11 @@ import {
     Inter_600SemiBold,
     Inter_700Bold
 } from '@expo-google-fonts/inter';
+import {
+    DMSans_400Regular,
+    DMSans_500Medium,
+    DMSans_700Bold
+} from '@expo-google-fonts/dm-sans';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import { Stack } from 'expo-router';
@@ -40,6 +45,9 @@ export default function RootLayout() {
         Inter_400Regular,
         Inter_600SemiBold,
         Inter_700Bold,
+        DMSans_400Regular,
+        DMSans_500Medium,
+        DMSans_700Bold,
     });
 
     useEffect(() => {
@@ -61,6 +69,7 @@ export default function RootLayout() {
             <StatusBar style="dark" backgroundColor={THEME.dark.background} />
             <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: THEME.dark.background }, title: 'Tekron' }}>
                 <Stack.Screen name="index" />
+                <Stack.Screen name="concluded" />
                 <Stack.Screen name="auth/login" />
                 <Stack.Screen name="admin/dashboard" />
                 <Stack.Screen name="participant" />

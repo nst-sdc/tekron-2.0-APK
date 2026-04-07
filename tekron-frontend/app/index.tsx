@@ -16,12 +16,9 @@ export default function Index() {
 
         if (isLoading || !rootNavigationState?.key) return;
 
-        const inAuthGroup = segments[0] === 'auth';
-
         if (!isAuthenticated) {
-            if (!inAuthGroup) {
-
-                setTimeout(() => router.replace('/auth/login'), 0);
+            if (segments[0] !== 'concluded') {
+                setTimeout(() => router.replace('/concluded'), 0);
             }
         } else if (user) {
 
