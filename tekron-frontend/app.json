@@ -2,7 +2,7 @@
   "expo": {
     "name": "Tekron",
     "slug": "tekron",
-    "version": "1.0.1",
+    "version": "2.1.1",
     "orientation": "portrait",
     "icon": "./assets/images/appIcon.png",
     "scheme": "tekron",
@@ -10,7 +10,7 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.newtonschooloftechnology.tekron"
+      "bundleIdentifier": "com.nst.tekron"
     },
     "android": {
       "versionCode": 2,
@@ -32,7 +32,7 @@
         "android.permission.READ_MEDIA_VIDEO",
         "android.permission.READ_MEDIA_AUDIO"
       ],
-      "package": "com.newtonschooloftechnology.tekron"
+      "package": "com.nst.tekron"
     },
     "web": {
       "output": "static",
