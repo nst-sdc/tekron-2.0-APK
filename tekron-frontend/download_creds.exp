@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+set timeout 10
+spawn eas credentials
+expect "Select platform"
+send "\r"
+expect "Which build profile do you want to configure?"
+send "\033\[B\033\[B\r"
+expect "What do you want to do?"
+# We need to select credentials.json
+# Options: Keystore, Google Service Account, Push Notifications, credentials.json
+# That is the 4th option. So we send down arrow 3 times.
+send "\033\[B\033\[B\033\[B\r"
+expect "What do you want to do?"
+# Options inside credentials.json:
+# 1. Download credentials from EAS to credentials.json
+# 2. Upload credentials from credentials.json to EAS
+send "\r"
+expect eof
